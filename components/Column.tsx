@@ -24,7 +24,7 @@ function Column({ id, todos, index }: props) {
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <Droppable droppableId={index.toString()} type='card' >
+          <Droppable droppableId={index.toString()} direction='vertical' type='card' isDropDisabled={false} isCombineEnabled={false} ignoreContainerClipping={false} >
             {(providColumn, snapshot) => (
               <div
                 {...providColumn.droppableProps}
